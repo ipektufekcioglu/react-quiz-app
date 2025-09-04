@@ -1,42 +1,114 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.homepage > h1 {
+  color: #293264;
+  font-weight: 700;
+  font-family: "Karla", sans-serif;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  line-height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.homepage > p {
+  color: #293264;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 1.81rem;
+  
 }
 
-.card {
-  padding: 2em;
+.homepage > button {
+  color: #F5F7FB;
+  background-color: #4D5B9E;
+  width: 193px;
+  height: 52px;
+  border: none;
+  border-radius: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
-.read-the-docs {
-  color: #888;
+.question-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 1px solid #DBDEF0;
+  margin-top: 1rem;
+}
+
+.question > h2 {
+  color: #293264;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 100%;
+  margin-bottom: 0.75rem;
+}
+
+.answer-btns{
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.answer-btns > button {
+  color: #293264;
+  font-size: 0.64rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  background-color: #F5F7FB;
+  border: 1px solid #293264;
+  padding: 0.3rem 1.5rem;
+  border-radius: 8px;
+}
+
+.check-btn {
+  background-color: #4D5B9E;
+  color: #F5F7FB;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+}
+
+.score-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.score-container > h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: #293264;
+  font-size: 0.75rem;
+  
 }
