@@ -56,7 +56,7 @@ export default function Quiz() {
     function handleReset() {
         fetchedRef.current = false
         setIsQuizOver(false)
-        console.log(correctAnswers)
+        setUserAnswers([0,0,0,0,0])
     }
    
 
