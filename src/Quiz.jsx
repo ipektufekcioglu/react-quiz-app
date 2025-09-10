@@ -13,6 +13,7 @@ export default function Quiz() {
 
     const score = quizResults.filter(el => el).length
     const fetchedRef = useRef(false)
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         if (fetchedRef.current) {
@@ -35,7 +36,7 @@ export default function Quiz() {
             }
             ))
             setCorrectAnswers(data.results.map(el => decode(el.correct_answer, {level:"html5"})))
-            
+            setLoading(false)
         }
     },[isQuizOver])
 
@@ -56,7 +57,7 @@ export default function Quiz() {
     function handleReset() {
         fetchedRef.current = false
         setIsQuizOver(false)
-        setUserAnswers([0,0,0,0,0])
+        setLoading(true)
     }
    
 
@@ -72,6 +73,10 @@ export default function Quiz() {
                 correctAnswer={correctAnswers[index]}
                 onSelect={handleSelect}/>
     }) 
+
+    if (loading) {
+        return <h2>Loading...</h2>
+    }
 
     
     return (
